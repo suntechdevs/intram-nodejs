@@ -31,10 +31,10 @@ CheckoutInvoice.prototype.create = function (){
             .send(requestBody)
             .end(function (err, res) {
                 if (err) return reject(err)
-
                 if (!res.body.error) {
                     self.token = res.body.transaction_id;
                     self.url = res.body.receipt_url;
+                    self.status=res.body.status;
                     //check invoice status
                     resolve(self.confirm());
                 } else {
