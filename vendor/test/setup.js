@@ -27,13 +27,13 @@ describe('Setup', function () {
 
     it('should set to sandbox base url as endpoint in test mode', function (done){
         var setup = new Setup({mode: 'test'});
-        assert.strictEqual(setup.baseURL, 'http://192.168.8.106:4200/api/v1/');
+        assert.strictEqual(setup.baseURL, 'http://localhost:4200/api/v1/');
         done();
     });
 
     it('should set live baseURL when mode !== "test"', function (done){
         var setup = new Setup();
-        assert.strictEqual(setup.baseURL, 'http://192.168.8.106:4200/api/v1/');
+        assert.strictEqual(setup.baseURL, 'http://localhost:4200/api/v1/');
         done();
     });
 });

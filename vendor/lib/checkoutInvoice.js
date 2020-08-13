@@ -55,7 +55,7 @@ CheckoutInvoice.prototype.confirm = function (givenToken) {
     let self = this;
     let token = givenToken ? givenToken : self.token;
     return new Promise(function (resolve, reject) {
-        request.get(self.baseURL + '/confirm/' + token)
+        request.get(self.baseURL + 'transactions/confirm/' + token)
             .set(self.config)
             .end(function (err, res) {
                 if (err) return reject(err)

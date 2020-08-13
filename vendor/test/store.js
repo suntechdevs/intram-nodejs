@@ -15,13 +15,14 @@ describe('Store', function () {
 
     it('should set values on initialize', function (done){
         var data = {
-            name: 'Magasin Chez Alexandra Mereum',
+            name: 'landryShop',
             tagline: "L'élégance n'a pas de prix",
             phoneNumber: '22967723243',
-            postalAddress: 'Cotonou Benin Abomey Calavi',
-            template: 'Cotonou Benin Abomey Calavi',
+            postalAddress: 'Benin Abomey Calavi',
             color: 'Cotonou Benin Abomey Calavi',
-            logo_url: 'Cotonou Benin Abomey Calavi'
+            logo_url: 'Cotonou Benin Abomey Calavi',
+            website_url: 'http://landryAmerine.com',
+            template: 'Cotonou Benin Abomey Calavi'
         };
         var store = new Store(data);
 
@@ -30,6 +31,7 @@ describe('Store', function () {
         assert.strictEqual(store.phone_number, data.phoneNumber);
         assert.strictEqual(store.postal_address, data.postalAddress);
         assert.strictEqual(store.template, data.template);
+        assert.strictEqual(store.website_url, data.website_url);
         assert.strictEqual(store.color, data.color);
         assert.strictEqual(store.logo_url, data.color);
         done();

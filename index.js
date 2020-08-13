@@ -1,8 +1,8 @@
 exports.Setup = exports.setup = Setup;
 exports.Store = exports.store = Store;
 exports.CheckoutInvoice = exports.checkoutInvoice = require('./vendor/lib/checkoutInvoice');
-exports.OnsiteInvoice = exports.onsiteInvoice = require('./vendor/lib/onsite-invoice');
-exports.DirectPay = exports.directPay = require('./vendor/lib/direct-pay');
+// exports.OnsiteInvoice = exports.onsiteInvoice = require('./vendor/lib/onsite-invoice');
+// exports.DirectPay = exports.directPay = require('./vendor/lib/direct-pay');
 
 /**
  * Setup INTRAM
@@ -32,8 +32,8 @@ function Store(data) {
     if (data.tagline) this.tagline = data.tagline;
     if (data.phoneNumber) this.phone_number = data.phoneNumber;
     if (data.postalAddress) this.postal_address = data.postalAddress;
-    if (data.logoURL) this.logo_url = data.logoURL;
-    if (data.websiteURL) this.website_url = data.websiteURL;
+    if (data.logo_url) this.logo_url = data.logo_url;
+    if (data.website_url) this.website_url = data.website_url;
     if (data.color) this.color = data.color;
     if (data.template) this.template = data.template;
     if (data.cancelURL) this.cancel_url = data.cancelURL;
