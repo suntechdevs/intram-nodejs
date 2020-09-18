@@ -1,9 +1,8 @@
 {
   "name": "intram-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "INTRAM NODEJS API CLIENT",
   "main": "index.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "mocha"
   },
@@ -16,5 +15,6 @@
     "express": "^4.17.1",
     "mocha": "^8.1.1",
     "superagent": "latest"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
