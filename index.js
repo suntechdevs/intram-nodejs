@@ -15,10 +15,10 @@ function Setup(data) {
      this.config['X-API-KEY'] = data && data.publicKey || process.env.INTRAM_PUBLIC_KEY;
     this.config['X-SECRET-KEY'] = data && data.secret || process.env.INTRAM_SECRET;
     this.config['Content-Type'] = 'application/json';
-    if (data && data.mode && data.mode.toLowerCase() === 'test')
-        this.baseURL = 'http://localhost:4200/api/v1/';
+    if (data && data.mode && data.mode.toLowerCase() === 'sandbox')
+        this.baseURL = 'https://webservices.intram.cf:4002/api/v1/';
     else
-        this.baseURL = 'http://localhost:4200/api/v1/';
+        this.baseURL = 'https://webservices.intram.cf:4002/api/v1/';
 }
 
 /**

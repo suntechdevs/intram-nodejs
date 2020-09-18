@@ -8,7 +8,7 @@ let assert = require('assert')
 describe('Invoice', function (){
     describe('#addItem()', function () {
         it('should add item to invoice', function (done){
-            let setup = new Setup({mode: 'test'});
+            let setup = new Setup({mode: 'sandbox'});
             let store = new Store({name: 'landryShop'});
             let invoice = new Invoice(setup, store);
             invoice.addItem('LG', 1, 5000, 5000, 'gadget lg');
@@ -27,7 +27,7 @@ describe('Invoice', function (){
 
     describe('#addTax()', function () {
         it('should add tax with valid parameters', function (done){
-            let setup = new Setup({made: 'test'});
+            let setup = new Setup({mode: 'sandbox'});
             let store = new Store({name: 'landryShop', returnURL: 'http://landryShop.com/callback'});
             let invoice = new Invoice(setup, store);
             invoice.addTax('TVA', 18);
@@ -40,7 +40,7 @@ describe('Invoice', function (){
 
     describe('#addChannels()', function () {
         it('should add channels with valid parameters', function (done){
-            let setup = new Setup({made: 'test'});
+            let setup = new Setup({mode: 'sandbox'});
             let store = new Store({name: 'landryShop', returnURL: 'http://landryShop.com/callback'});
             let invoice = new Invoice(setup, store);
             invoice.addChanels(['MTN-BENIN', 'orange-money-senegal', 'card']);
@@ -53,7 +53,7 @@ describe('Invoice', function (){
 
     describe('#addCustomData', function () {
         it('should add custom data', function (done){
-            let setup = new Setup({mode: 'test'});
+            let setup = new Setup({mode: 'sandbox'});
             let store = new Store({name: 'landryShop'});
             let invoice = new Invoice(setup, store);
             invoice.addCustomData('size', 'large');
@@ -64,7 +64,7 @@ describe('Invoice', function (){
 
     describe('#generateRequestBody()', function () {
         it('should fail with invalid parameters', function (done) {
-            let setup = new Setup({mode: 'test'});
+            let setup = new Setup({mode: 'sandbox'});
             let store = new Store({name: 'landryShop', returnURL: 'http://landryShop.com/callback'});
             let invoice = new Invoice(setup, store);
             assert.throws(function () {

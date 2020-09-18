@@ -19,7 +19,7 @@ Setup intram API keys.
 
 ```js
 var setup = new intram.Setup({
-  mode: 'test', // optional. use in sandbox mode.
+  mode: 'sandbox', // change to live for production mode.
   marchandKey: 'tpk_5e9469e65341de91988b352eba11f9f0c5f671384e1d6bfb09ce30103bcc09903b42dfacfb2b436d4b48af01f763bbaa1748b1d6ea165d4a2f581bcfd1fd8943',
   privateKey: 'tpk_5e9469e65341de91988b352eba11f9f0c5f671384e1d6bfb09ce30103bcc09903b42dfacfb2b436d4b48af01f763bbaa1748b1d6ea165d4a2f581bcfd1fd8943',
   publicKey: "5e59e0c34bb8737cedf4c0ec92d9ae94007e33e5c30280596456990d9fc2f6058147a092fa6017ab5a25150fc0dd2991cff0e49b9ee8cb04355b689769d68d44",
@@ -42,7 +42,7 @@ var store = new intram.Store({
   postalAddress: 'Benin-Cotonou Akpakpa',
   websiteURL: 'Benin - Cotonou - Akpakpa',
   logoURL: 'http://www.landryShop/logo.png',
-  color:"blue", //for custom paiement portal color,
+  color:"#Obad9b", //code for custom paiement portal color,
   template:"default", // Choose the payment portal model that your customers will see
 });
 ```
@@ -70,6 +70,12 @@ invoice.description = 'Pretty and suitable for your waterfall'
 
 ```js
 invoice.totalAmount = 450000;
+```
+
+## Setting Currency
+
+```js
+invoice.currency = 'XOF';
 ```
 
 ## Redirecting to intram Checkout
